@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	background-color: #f6f9fc;
+}
+
+.navbar {
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 100px;
+	max-width: 100%;
+	height: 90px;
+
+	.navbar-logo {
+		a {
+			text-decoration: none;
+			color: black;
+			font-weight: 900;
+			font-size: 24px;
+			position: relative;
+			padding: 0 10px;
+			letter-spacing: 0.5px;
+            text-transform: uppercase;
+		}
+	}
+}
