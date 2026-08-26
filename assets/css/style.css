@@ -25,19 +25,11 @@ body {
 		padding-bottom: 16px;
 		padding-top:10px;
 
-		.navbar-logo {
-			a {
-				text-decoration: none;
-				font-size: 26px;
-				font-weight: 900;
-				.logo-red {
-					color: #e51a24;
-				}
-				.logo-black {
-					color: #111111;
-				}
-			}
+		.navbar-logo img {
+			width: 160px;
+			height: auto;
 		}
+
 
 		.navbar-search {
 			flex: 1;

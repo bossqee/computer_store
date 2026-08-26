@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/style.css?v=' . time()) ?>">
+
 </head>
 
 <body>
@@ -18,8 +19,8 @@
         <div class="navbar-top">
             <!-- Logo -->
             <div class="navbar-logo">
-                <a href="#">
-                    <span class="logo-red">iHAVE</span><span class="logo-black">CPU</span>
+                <a href="<?= base_url() ?>">
+                    <img class="Logo" src="<?= base_url('assets/img/Logo.png') ?>" alt="Logo">
                 </a>
             </div>
 
