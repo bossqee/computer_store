@@ -2,32 +2,143 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-family: "Prompt", sans-serif;
 }
 
 body {
 	background-color: #f6f9fc;
 }
 
-.navbar {
-	background-color: white;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 15px 100px;
-	max-width: 100%;
-	height: 90px;
+.navbar-container {
+	background-color: #ffffff;
+	border-bottom: 1px solid #eaeaea;
+	padding: 12px 60px;
+	width: 100%;
+	box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.1);
 
-	.navbar-logo {
-		a {
-			text-decoration: none;
-			color: black;
-			font-weight: 900;
-			font-size: 24px;
-			position: relative;
-			padding: 0 10px;
-			letter-spacing: 0.5px;
-            text-transform: uppercase;
+	/* --- แถวบน: Logo, Search, Actions --- */
+	.navbar-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+		padding-bottom: 16px;
+		padding-top:10px;
+
+		.navbar-logo {
+			a {
+				text-decoration: none;
+				font-size: 26px;
+				font-weight: 900;
+				.logo-red {
+					color: #e51a24;
+				}
+				.logo-black {
+					color: #111111;
+				}
+			}
+		}
+
+		.navbar-search {
+			flex: 1;
+			max-width: 700px;
+
+			form {
+				position: relative;
+				display: flex;
+				align-items: center;
+				width: 100%;
+
+				.search-icon {
+					position: absolute;
+					left: 16px;
+					display: flex;
+					align-items: center;
+					color: #888888;
+					pointer-events: none;
+				}
+
+				input {
+					width: 100%;
+					padding: 10px 20px 10px 46px;
+					font-size: 14px;
+					border: 1px solid #e0e0e0;
+					border-radius: 50px;
+					outline: none;
+					background-color: #ffffff;
+					transition:
+						border-color 0.2s,
+						box-shadow 0.2s;
+
+					&::placeholder {
+						color: #9e9e9e;
+					}
+
+					&:focus {
+						border-color: #e51a24;
+						box-shadow: 0 0 0 2px rgba(229, 26, 36, 0.1);
+					}
+				}
+			}
+		}
+
+		.navbar-actions {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+
+			.action-btn {
+				width: 42px;
+				height: 42px;
+				border-radius: 50%;
+				border: none;
+				background-color: #f3f5f8;
+				color: #333333;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				transition:
+					background-color 0.2s,
+					color 0.2s;
+
+				&:hover {
+					background-color: #e8ecf1;
+					color: #e51a24;
+				}
+			}
+		}
+	}
+
+	/* --- แถวล่าง: หมวดหมู่สินค้า และ เมนูนำทาง --- */
+	.navbar-bottom {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: 6px;
+
+		.nav-links {
+			display: flex;
+			align-items: center;
+			gap: 32px;
+
+			.nav-item {
+				text-decoration: none;
+				color: #333333;
+				font-size: 14px;
+				font-weight: 400;
+				transition: color 0.2s;
+
+				&:hover {
+					color: #e51a24;
+				}
+				&:active {
+					color: #e51a24;
+				}
+				&.active {
+					color: #e51a24;
+				}
+			}
 		}
 	}
 }
