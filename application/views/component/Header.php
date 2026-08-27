@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iHAVECPU Header</title>
+    <title>PC4U</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
             <!-- Logo -->
             <div class="navbar-logo">
                 <a href="<?= base_url() ?>">
-                    <img class="Logo" src="<?= base_url('assets/img/Logo.png') ?>" alt="Logo">
+                    <img class="Logo" src="<?= base_url('assets/img/PC4U.png') ?>" alt="Logo">
                 </a>
             </div>
 

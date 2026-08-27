@@ -1,21 +1,21 @@
 <?php $this->load->view('component/Header.php') ?>
 
 <div class="Banner">
-    <img src="<?php echo base_url() ?>assets/img/banner.jpg" alt="banner">
+    <img src="<?php echo base_url() ?>assets/img/hero.jpg" alt="banner">
 </div>
 
 <div class="Banner-Slider">
     <div class="slide active">
-        <img src="<?php echo base_url() ?>assets/img/banner-slide-1.jpg" alt="banner">
+        <img src="<?php echo base_url('assets/img/banner-slide-1.jpg') ?>" alt="banner">
     </div>
     <div class="slide active">
-        <img src="<?php echo base_url() ?>assets/img/banner-slide-2.jpg" alt="banner">
+        <img src="<?php echo base_url('assets/img/banner-slide-2.jpg') ?>" alt="banner">
     </div>
     <div class="slide active">
-        <img src="<?php echo base_url() ?>assets/img/banner-slide-3.jpg" alt="banner">
+        <img src="<?php echo base_url('assets/img/banner-slide-3.jpg') ?>" alt="banner">
     </div>
     <div class="slide active">
-        <img src="<?php echo base_url() ?>assets/img/banner-slide-4.jpg" alt="banner">
+        <img src="<?php echo base_url('assets/img/banner-slide-4.jpg') ?>" alt="banner">
     </div>
 </div>
 
