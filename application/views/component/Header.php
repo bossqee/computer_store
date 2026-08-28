@@ -27,7 +27,7 @@
             <!-- Logo -->
             <div class="navbar-logo">
                 <a href="<?= base_url() ?>">
-                    <img class="Logo" src="<?= base_url('assets/img/PC4U.png') ?>" alt="Logo">
+                    <img class="Logo" src="<?= base_url('assets/img/PC4U-black.png') ?>" alt="Logo">
                 </a>
             </div>
 

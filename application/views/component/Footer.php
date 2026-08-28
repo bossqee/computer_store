@@ -4,7 +4,7 @@
         <div class="footer-col">
             <!-- เว้นว่างส่วนของ logo ไว้ก่อน (ใส่ id/class ไว้ให้สำหรับจัดการทีหลัง) -->
             <div class="footer-logo-placeholder">
-                <!-- <img src="<?= base_url('assets/img/logo.png') ?>" alt="iHAVECPU" style="max-width: 100%;"> -->
+                <img src="<?= base_url('assets/img/PC4U-white.png') ?>" alt="PC4U" style="max-width: 100%;">
             </div>
             <p>ถ้าคุณชอบคอมพิวเตอร์ เราคือเพื่อนกัน PC4U ร้านจำหน่ายอุปกรณ์คอมพิวเตอร์ รับประกันทุกชิ้น บริการจัดสเปกคอมพิวเตอร์ ตามการใช้งานในงบประมาณที่ลูกค้าเลือกได้เอง</p>
             <!-- เว้นว่างสำหรับ e-Tax badge -->
