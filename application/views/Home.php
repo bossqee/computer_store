@@ -19,6 +19,8 @@
     </div>
 </div>
 
+<?php $this->load->view('component/Footer.php') ?>
+
 <script>
     $(document).ready(() => {
         $('.Banner-Slider').slick({
