@@ -23,18 +23,31 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-// ดึง protocol (http หรือ https)
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+// 1. เช็ก Protocol (รองรับ Reverse Proxy ของ Render/Cloudflare)
+$is_https = (
+    (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ||
+    (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443) ||
+    (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')
+);
 
-// ดึง domain name
-$domain = $_SERVER['HTTP_HOST'];
+$protocol = $is_https ? "https://" : "http://";
 
-// ดึง subfolder อัตโนมัติ (เช่น /computer_store/ ถ้าเป็น local)
-$path = str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
+// 2. เช็ก Host Name
+$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost';
 
-// รวมเป็น base_url
-$config['base_url'] = $protocol . $domain . $path;
-// $config['base_url'] = 'http://localhost/computer_store/';
+// 3. จัดการ Path สำหรับ Local และ Production (ตัด index.php ออก)
+$script_name = $_SERVER['SCRIPT_NAME'];
+$path = str_replace('\\', '/', dirname($script_name));
+$path = rtrim($path, '/');
+
+if ($path !== '') {
+    $path .= '/';
+} else {
+    $path = '/';
+}
+
+// 4. รวมเป็น base_url
+$config['base_url'] = $protocol . $host . $path;
 
 /*
 |--------------------------------------------------------------------------
